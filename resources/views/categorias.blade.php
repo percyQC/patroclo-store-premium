@@ -3,16 +3,18 @@
 
 @section('content')
 
-    <h4>Categorias disponibles</h4>
+<h1 class="text-center text-gray-700 text-2xl font-medium">Elige una categoria</h1>
 
+<div class="flex flex-wrap justify-evenly mt-4 gap-4">
 
-<div class="flex justify-center">
-    <div class="">
-        categoria 1
-    </div>
-    <div class="">
-        categoria 2
-    </div>
+    @foreach($categorias as $categoria)
+
+    <a href="{{ route('subcategorias.index', $categoria->id_categoria) }}" class="bg-gray-200 hover:bg-gray-300 w-[300px] h-[200px] p-4 rounded cursor-pointer">
+        <img class="h-[130px] w-full object-cover rounded" src="{{ $categoria->imagen_url }}" >
+        <p class="text-center mt-2 font-medium text-gray-800">{{ $categoria->nombre }}</p>
+    </a>
+
+    @endforeach
+    
 </div>
 @endsection
-

@@ -12,8 +12,10 @@
         @include('partials.menubar')
     </header>
 
-    <main class="bg-red-200">
+    <main>
+        <div class="max-w-[1080px] pt-5 m-auto">
         @yield('content')
+</div>
     </main>
     
 </body>
