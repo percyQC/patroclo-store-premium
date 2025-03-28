@@ -9,6 +9,7 @@ class Subcategoria extends Model
     protected $table = 'subcategorias';
 
     protected $fillable = [
+        'id_subcategoria',
         'id_categoria',
         'nombre',
         'imagen_url'
